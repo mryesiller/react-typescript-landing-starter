@@ -1,14 +1,27 @@
-type TextType = JSX.IntrinsicElements["p"] & {
-  element?: "p" | "span"
-}
+import React, { Fragment } from "react"
 
 interface TextProps {
   children: React.ReactNode
+  className?: string | undefined
+  elementType: JSX.IntrinsicElements | string
+  [x: string | number]: any
 }
 
-const Text = (props: TextType, { children }: TextProps) => {
-  if (props.element === "p") return <p {...props}>{children}</p>
-  if (props.element === "span") return <span {...props}>{children}</span>
+const Text = ({ children, className, elementType, ...rest }: TextProps) => {
+  return (
+    <Fragment>
+      {elementType === "p" && (
+        <p data-testid="text" className={className} {...rest}>
+          {children}
+        </p>
+      )}
+      {elementType === "span" && (
+        <span data-testid="text" className={className} {...rest}>
+          {children}
+        </span>
+      )}
+    </Fragment>
+  )
 }
 
 export default Text

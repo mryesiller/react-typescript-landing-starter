@@ -1,9 +1,14 @@
 import React from "react"
 
-type LogoProps = JSX.IntrinsicElements["img"]
+interface LogoProps {
+  src: string
+  alt: string
+  className?: string | undefined
+  [x: string | number]: any
+}
 
-const Logo: React.FC = (props: LogoProps) => {
-  return <img src={props.src} alt={props.alt} {...props} />
+const Logo = ({ src, alt, className, ...rest }: LogoProps) => {
+  return <img data-testid="logo" src={src} alt={alt} {...rest} />
 }
 
 export default Logo

@@ -1,12 +1,24 @@
 import React, { forwardRef } from "react"
 
-type ButtonProps = JSX.IntrinsicElements["button"]
+interface ButtonProps {
+  children: React.ReactNode
+  className?: string | undefined
+  onClick?: (event: React.MouseEvent<HTMLElement>) => void
+  [x: string]: any
+}
 
-const Button: React.FC = forwardRef<HTMLButtonElement, ButtonProps>(
-  (props, ref) => {
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ children, className, onClick, ...rest }, ref) => {
     return (
-      <button type="button" ref={ref} {...props}>
-        {props.children}
+      <button
+        data-testid="button"
+        type="button"
+        ref={ref}
+        className={className}
+        onClick={onClick}
+        {...rest}
+      >
+        {children}
       </button>
     )
   }
