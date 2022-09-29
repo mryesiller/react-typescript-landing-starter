@@ -4,6 +4,7 @@ interface TitleProps {
   children: React.ReactNode
   className?: string | undefined
   elementType: JSX.IntrinsicElements | string
+  [x: string]: any
 }
 
 const Title = ({ elementType, children, className, ...rest }: TitleProps) => {

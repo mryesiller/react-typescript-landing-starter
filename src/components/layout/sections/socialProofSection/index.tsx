@@ -1,7 +1,7 @@
 import React from "react"
 
 const SocialProof = () => {
-  return <div>SocialProof</div>
+  return <section>SocialProof</section>
 }
 
 export default SocialProof

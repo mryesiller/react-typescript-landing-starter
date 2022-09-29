@@ -1,7 +1,11 @@
 import React from "react"
 
-const Main = () => {
-  return <div>Main</div>
+interface MainProps {
+  children: React.ReactNode
+}
+
+const Main = ({ children }: MainProps) => {
+  return <main>{children}</main>
 }
 
 export default Main
