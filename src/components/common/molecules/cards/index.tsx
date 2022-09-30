@@ -1,6 +1,6 @@
 import React from "react"
 
-import Logo from "../../atoms/logo"
+import Logo from "../../atoms/image"
 import Title from "../../atoms/title"
 import Text from "../../atoms/text"
 
