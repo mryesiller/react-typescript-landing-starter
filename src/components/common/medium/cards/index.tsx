@@ -1,8 +1,8 @@
 import React from "react"
 
-import Logo from "../../atoms/image"
-import Title from "../../atoms/title"
-import Text from "../../atoms/text"
+import Logo from "../../low/image"
+import Title from "../../low/title"
+import Text from "../../low/text"
 
 interface BasicCardProps {
   children: React.ReactNode

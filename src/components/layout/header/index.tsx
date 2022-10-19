@@ -1,9 +1,9 @@
 import React from "react"
 
-import Button from "../../common/atoms/button"
-import Image from "../../common/atoms/image"
-import Text from "../../common/atoms/text"
-import Title from "../../common/atoms/title"
+import Button from "../../common/low/button"
+import Image from "../../common/low/image"
+import Text from "../../common/low/text"
+import Title from "../../common/low/title"
 
 const Header = () => {
   return (
